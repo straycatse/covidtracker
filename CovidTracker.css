@@ -1,0 +1,16 @@
+/*
+ *
+ * CovidTracker
+ *
+ * Simon
+ * MIT Licensed.
+ *
+ * Custom here your css module
+ *
+ */
+
+label {
+	font-size: 14px;
+	margin-bottom: none !important;
+	display: block;
+}
