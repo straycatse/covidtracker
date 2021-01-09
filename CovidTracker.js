@@ -3,7 +3,7 @@
 /* Magic Mirror
  * Module: CovidTracker
  *
- * By Simon
+ * By Simon Solberg during IOT
  * MIT Licensed.
  */
 
@@ -32,8 +32,7 @@ Module.register("CovidTracker", {
 
 	/*
 	 * getData
-	 * function example return data and show it in the module wrapper
-	 * get a URL request
+	 * Get Covid-data and show it in the module wrapper
 	 *
 	 */
 	getData: function() {
@@ -87,12 +86,12 @@ Module.register("CovidTracker", {
 	getDom: function() {
 		var self = this;
 
-		// create element wrapper for show into the module
+		// Create element wrapper for show into the module
 		var wrapper = document.createElement("div");
 		// If this.dataRequest is not empty
 		if (this.dataRequest) {
 			var wrapperDataRequest = document.createElement("div");
-			// check format https://jsonplaceholder.typicode.com/posts/1
+			
 			var confirmedCases = 0;
 			var totalDeaths = 0;
 			for (region of this.dataRequest.data) {
@@ -100,19 +99,11 @@ Module.register("CovidTracker", {
 				totalDeaths += region.deaths;
 			}
 
-			//wrapperDataRequest.innerHTML = confirmedCases;
-
 			var labelConfirmedCases = document.createElement("label");
 			var labelTotalDeaths = document.createElement("label");
 
 			labelConfirmedCases.innerHTML = "Antal fall: " + confirmedCases;
 			labelTotalDeaths.innerHTML = "Antal döda: " + totalDeaths;
-			
-			//var labelDataRequest = document.createElement("label");
-			// Use translate function
-			//             this id defined in translations files
-			//labelDataRequest.innerHTML = this.translate("TITLE");
-
 
 			wrapper.appendChild(labelConfirmedCases);
 			wrapper.appendChild(labelTotalDeaths);

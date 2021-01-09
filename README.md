@@ -2,7 +2,9 @@
 
 This is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/).
 
-Todo: Insert description here!
+This module displays data about Covid cases and deaths in Sweden.
+
+Data is collected from the Covid Api (https://covid-api.com/) provided by Johns Hopkins CSSE. 
 
 ## Using the module
 
@@ -20,7 +22,8 @@ var config = {
 }
 ```
 
-## Configuration options
+## Configuration options - No config options currently available for this module.
+
 
 | Option           | Description
 |----------------- |-----------
